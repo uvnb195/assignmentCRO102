@@ -9,25 +9,30 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 import SmallIcon from './src/components/icon/SmallIcon';
 import NavIcon from './src/components/icon/NavIcon';
-import RowCard from './src/components/card/RowCard'
+import RowCard from './src/components/card/'
 
-const App = () => {
-  return (
-    <>
-      <StatusBar style='light' />
+const productImg = require('./src/assets/products/img.png')
 
-      <SafeAreaView>
-        <ScreenWrapper containerClassName='w-full h-full items-center justify-center p-2' >
+const App = () => (
+  <>
+    <StatusBar style='light' />
 
-          <RowCard />
-          {/* <BlurView rgbaColor={itemBgLight} containerClassName='flex flex-row items-center' >
+    <SafeAreaView>
+      <ScreenWrapper containerClassName='w-full h-full items-center justify-center p-2'>
 
+        {/* <RowCard /> */}
+        <BlurView rgbaColor={itemBgLight} containerClassName='flex flex-row items-center'>
+          <ImageBackground source={productImg}>
+            <View className>
 
-          </BlurView> */}
-        </ScreenWrapper>
-      </SafeAreaView>
-    </>
-  );
-}
+            </View>
+
+          </ImageBackground>
+
+        </BlurView>
+      </ScreenWrapper>
+    </SafeAreaView>
+  </>
+)
 
 export default App
