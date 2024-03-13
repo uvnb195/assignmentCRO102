@@ -2,7 +2,7 @@ import React from 'react'
 import { ImageBackground, View } from 'react-native'
 
 type Props = {
-    children?: React.ReactNode,
+    children?: React.JSX.Element,
     containerClassName?: string,
     backgroundSrc?: any,
     blurRadius?: number,

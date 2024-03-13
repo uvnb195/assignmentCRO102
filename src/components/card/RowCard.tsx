@@ -3,11 +3,14 @@ import { textBody1, textBody2, textBody2Gray, textGreen, textWhite } from '../..
 import { Image, ImageBackground, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import SmallIcon from '../icon/SmallIcon';
 
-const productImg = require('./src/assets/products/img.png')
+const productImg = require('../../assets/products/img.png')
 
-const RowCard = () => {
+type Props = {
+    containerClassName?: string,
+}
+const RowCard = ({ containerClassName }: Props) => {
     return (
-        <View>
+        <View className={containerClassName || 'flex-row'}>
             {/* index */}
             <View className='flex items-center justify-center'>
                 <Text className={textWhite + ' pl-4'}>1</Text>

@@ -9,6 +9,7 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 import SmallIcon from './src/components/icon/SmallIcon';
 import NavIcon from './src/components/icon/NavIcon';
+import RowCard from './src/components/card/RowCard'
 
 const App = () => {
   return (
@@ -18,11 +19,11 @@ const App = () => {
       <SafeAreaView>
         <ScreenWrapper containerClassName='w-full h-full items-center justify-center p-2' >
 
+          <RowCard />
+          {/* <BlurView rgbaColor={itemBgLight} containerClassName='flex flex-row items-center' >
 
-          <BlurView rgbaColor={itemBgLight} containerClassName='flex flex-row items-center' >
 
-
-          </BlurView>
+          </BlurView> */}
         </ScreenWrapper>
       </SafeAreaView>
     </>

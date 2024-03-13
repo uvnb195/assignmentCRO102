@@ -6,6 +6,7 @@
   },
   "include": [
     "src/components",
-    "./custom.d.ts"
+    "./custom.d.ts",
+    "app.d.ts"
   ]
 }
