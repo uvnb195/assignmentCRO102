@@ -1,5 +1,6 @@
 import React from 'react'
 import { ImageBackground, View } from 'react-native'
+import { white } from '../theme'
 
 type Props = {
     children?: React.JSX.Element,

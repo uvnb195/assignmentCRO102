@@ -1,7 +1,7 @@
 import {
     MaterialCommunityIcons,
     Octicons,
-    SimpleLineIcons
+    SimpleLineIcons, MaterialIcons
 } from '@expo/vector-icons'
 import React from 'react'
 import { white } from '../../theme'
@@ -9,11 +9,12 @@ import { View } from 'react-native'
 
 type Props = {
     containerClassName?: string,
-    name: 'currency' | 'heart' | 'category' | 'link'
+    name: 'currency' | 'heart' | 'category' | 'link' | 'arrow'
     color?: string,
-    size?: number
+    size?: number,
+    active?: boolean
 }
-const SmallIcon = ({ containerClassName, name, color, size }: Props) => {
+const SmallIcon = ({ containerClassName, name, color, size, active }: Props) => {
     const renderIcon = () => {
         switch (name) {
             case 'currency':
@@ -29,9 +30,14 @@ const SmallIcon = ({ containerClassName, name, color, size }: Props) => {
                     <SimpleLineIcons name='grid' size={size || 20} color={color || white(0.5)} />
                 )
 
-            case 'link': return (
-                <SimpleLineIcons name='link' size={size || 20} color={color || white(0.5)} />
-            )
+            case 'link':
+                return (
+                    <SimpleLineIcons name='link' size={size || 20} color={color || white(0.5)} />
+                )
+            case 'arrow':
+                return (
+                    <SimpleLineIcons name={active ? (active == true ? 'arrow-up' : 'arrow-down') : 'arrow-down'} size={size || 20} color={color || white(0.5)} />
+                )
         }
     }
     return (

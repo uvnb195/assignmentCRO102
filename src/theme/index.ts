@@ -10,7 +10,7 @@ export const red = `#FF453A`
 
 // background config
 export const itemBgLight = {
-    backgroundColor: white(0.2),
+    backgroundColor: white(0.1),
     borderColor: white(0.5),
 }
 
@@ -18,6 +18,8 @@ export const itemBgDark = {
     backgroundColor: black(0.2),
     borderColor: white(0.5),
 }
+
+//border radius
 
 
 // tailwind custom class
@@ -28,8 +30,9 @@ export const textGreen = `text-primary-green`
 export const textRed = `text-primary-red`
 export const textGray = `text-primary-dark`
 //text format
+export const textWelcome = `text-[36px] font-extrabold tracking-[1.5px] ${textWhite}`
 export const textTitle1 = `text-[28px] font-[600] leading-auto ${textWhite} tracking-[0.38px]`
-export const textTitle2 = `text-[22px] font-[600] leading-[28px] ${textWhite} tracking-[1px]`
+export const textTitle2 = `text-[22px] font-[600] leading-[28px] ${textWhite} tracking-[1px] `
 export const textTitle3 = `text-[20px] font-[400] leading-[24px] tracking-[0.38px] ${textWhite}`
 export const textBody1 = `text-[17px] font-[500] leading-[22px] tracking-[0.7px] ${textWhite}`
 export const textBody1Light = `text-[17px] font-[400] leading-[22px] tracking-[0.5px] ${textWhite}`

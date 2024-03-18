@@ -1,20 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    './src/screens/**/*.{js,jsx,ts,tsx}',
     "./App.{js,jsx,ts,tsx}",
     "./src/**/*.{js,jsx,ts,tsx}",
-    './src/components/**/*.{js,jsx,ts,tsx}'
+    './src/components/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     textColor: {
       primary: {
         light: 'rgba(255,255,255,1)',
-        dark: 'rgba(235,235,245,0.3)',
+        dark: 'rgba(235,235,245,0.7)',
         green: 'rgba(52,199,89,1)',
       },
     }
     ,
     extend: {
+
       backgroundImage: {
         'gradient': "url('./src/assets/background-gradient.png')",
         'start': "url('./src/assets/background-start.png')",
@@ -27,7 +29,25 @@ module.exports = {
         shadow: '#452a7c',
         shadow_dark: '#000000',
         shadow_light: '#ffffff',
-        gray_light: 'rgba(235, 235, 245, 0.6)'
+        gray_light: 'rgba(235, 235, 245, 0.6)',
+        start_button: 'rgba(151, 169, 246, 0.5)'
+      },
+      borderColor: {
+        card: 'rgba(255,255,255,0.3)',
+      },
+      borderRadius: {
+        'sm': '8px',
+        'lg': '28px'
+      },
+      padding: {
+        'sm': '8px',
+        'md': '16px',
+        'lg': '28px'
+      },
+      margin: {
+        'sm': '8px',
+        'md': '16px',
+        'lg': '28px'
       },
       flex: {
         '5': '0 0 5%',

@@ -5,8 +5,8 @@
     "strict": true
   },
   "include": [
-    "nativewind-env.d.ts",
-    "src/components",
     "custom.d.ts",
+    "src/components",
+    "nativewind-env.d.ts",
   ]
 }

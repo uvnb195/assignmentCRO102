@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageBackground, SafeAreaView, StatusBar, StyleSheet, View } from 'react-native'
+import { Image, ImageBackground, SafeAreaView, StatusBar, StyleSheet, View } from 'react-native'
 import { bgGradient, bgStart } from '../assets'
 
 type Props = {
@@ -10,19 +10,15 @@ type Props = {
 
 const ScreenWrapper = ({ children, containerClassName, backgroundSrc }: Props) => {
     return (
-        <ImageBackground
-            source={backgroundSrc || bgGradient} resizeMode='stretch'  >
-            <View className={containerClassName}>
-                {children}
+        <View className={'relative ' + containerClassName}>
+            <View className='absolute top-0 bottom-0 left-0 right-0'>
+                <Image
+                    className='w-full h-full'
+                    source={backgroundSrc || bgGradient} resizeMode='cover' />
             </View>
-        </ImageBackground >
+            {children}
+        </View>
     )
 }
-
-// const styles = StyleSheet.create({
-//     abeezee: {
-//         fontFamily: 'ABeeZee-Regular',
-//     }
-// })
 
 export default ScreenWrapper
